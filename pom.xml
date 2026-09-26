@@ -115,7 +115,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.46</version>
+                <version>1.18.36</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -335,6 +335,13 @@
                     <compilerArgs>
                         <arg>-parameters</arg>
                     </compilerArgs>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.36</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
 
@@ -362,10 +369,6 @@
                             <shadedPattern>me.voper.slimeframe.locales</shadedPattern>
                         </relocation>
                         <relocation>
-                            <pattern>com.cryptomorin.xseries</pattern>
-                            <shadedPattern>me.voper.slimeframe.xseries</shadedPattern>
-                        </relocation>
-                        <relocation>
                             <pattern>com.jeff_media.morepersistentdatatypes</pattern>
                             <shadedPattern>me.voper.slimeframe.morepersistentdatatypes</shadedPattern>
                         </relocation>
@@ -387,13 +390,6 @@
                         <filter>
                             <artifact>*:*</artifact>
                             <excludes>
-                                <exclude>com/cryptomorin/xseries/XBiome*</exclude>
-                                <exclude>com/cryptomorin/xseries/NMSExtras*</exclude>
-                                <exclude>com/cryptomorin/xseries/NoteBlockMusic*</exclude>
-                                <exclude>com/cryptomorin/xseries/SkullCacheListener*</exclude>
-                                <exclude>com/cryptomorin/xseries/SkullUtils*</exclude>
-                                <exclude>com/cryptomorin/xseries/XEnchantment*</exclude>
-                                <exclude>com/cryptomorin/xseries/XBlock*</exclude>
                                 <exclude>META-INF/*</exclude>
                             </excludes>
                         </filter>
@@ -448,7 +444,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.46</version>
+            <version>1.18.36</version>
             <scope>provided</scope>
         </dependency>
 
@@ -481,12 +477,6 @@
         <dependency>
             <groupId>co.aikar</groupId>
             <artifactId>acf-paper</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.cryptomorin</groupId>
-            <artifactId>XSeries</artifactId>
-            <version>9.4.0</version>
         </dependency>
 
         <dependency>

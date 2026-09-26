@@ -39,7 +39,7 @@ O SlimeFrame é um addon para o Slimefun inspirado em Warframe que adiciona nova
 
 - Esse addon funciona com servidores **Spigot**/**Paper** assim como nos seus forks, como **Purpur**.
 - **Java Version:** 16+
-- **Minecraft Version:** 1.19+
+- **Minecraft Version:** 1.21+ / 26.x
 - **Slimefun Version:** RC-34+
 
 ## Comandos

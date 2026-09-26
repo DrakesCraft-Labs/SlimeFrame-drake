@@ -7,7 +7,6 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import com.cryptomorin.xseries.XMaterial;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -142,15 +141,15 @@ public final class SFrameItems {
         }).register(plugin);
 
         Resource.createRadioactive(SFrameStacks.RUBEDO, Radioactivity.VERY_DEADLY, new ItemStack[]{
-                XMaterial.REDSTONE_BLOCK.parseItem(), SlimefunItems.POWER_CRYSTAL, XMaterial.REDSTONE_BLOCK.parseItem(),
+                new ItemStack(Material.REDSTONE_BLOCK), SlimefunItems.POWER_CRYSTAL, new ItemStack(Material.REDSTONE_BLOCK),
                 SlimefunItems.POWER_CRYSTAL, SlimefunItems.PLUTONIUM, SlimefunItems.POWER_CRYSTAL,
-                XMaterial.REDSTONE_BLOCK.parseItem(), SlimefunItems.POWER_CRYSTAL, XMaterial.REDSTONE_BLOCK.parseItem()
+                new ItemStack(Material.REDSTONE_BLOCK), SlimefunItems.POWER_CRYSTAL, new ItemStack(Material.REDSTONE_BLOCK)
         }).register(plugin);
 
         Resource.createRadioactive(SFrameStacks.ARGON_CRYSTAL, Radioactivity.VERY_HIGH, new ItemStack[]{
-                XMaterial.AMETHYST_SHARD.parseItem(), SlimefunItems.BOOSTED_URANIUM, SFrameStacks.TELLURIUM,
-                SlimefunItems.BOOSTED_URANIUM, XMaterial.END_CRYSTAL.parseItem(), SlimefunItems.BOOSTED_URANIUM,
-                SFrameStacks.TELLURIUM, SlimefunItems.BOOSTED_URANIUM, XMaterial.AMETHYST_SHARD.parseItem()
+                new ItemStack(Material.AMETHYST_SHARD), SlimefunItems.BOOSTED_URANIUM, SFrameStacks.TELLURIUM,
+                SlimefunItems.BOOSTED_URANIUM, new ItemStack(Material.END_CRYSTAL), SlimefunItems.BOOSTED_URANIUM,
+                SFrameStacks.TELLURIUM, SlimefunItems.BOOSTED_URANIUM, new ItemStack(Material.AMETHYST_SHARD)
         }).register(plugin);
 
         new Resource(SFrameStacks.CUBIC_DIODES, new ItemStack[]{
@@ -210,7 +209,7 @@ public final class SFrameItems {
     private void registerMachines() {
         new ArtificialMangrove(Groups.MACHINES, SFrameStacks.ARTIFICIAL_MANGROVE, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SFrameStacks.FERSTEEL_ALLOY, SFrameStacks.ADRAMAL_ALLOY, SFrameStacks.FERSTEEL_ALLOY,
-                SFrameStacks.TRAVOCYTE_ALLOY, XMaterial.MUD.parseItem(), SFrameStacks.TRAVOCYTE_ALLOY,
+                SFrameStacks.TRAVOCYTE_ALLOY, new ItemStack(Material.MUD), SFrameStacks.TRAVOCYTE_ALLOY,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BIG_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -228,13 +227,13 @@ public final class SFrameItems {
 
         new AutoTrader(Groups.MACHINES, SFrameStacks.AUTO_TRADER, Foundry.RECIPE_TYPE, new ItemStack[]{
                 getAlloyPlate(SFrameStacks.THAUMIC_DISTILLATE), SlimefunItems.VILLAGER_RUNE, getAlloyPlate(SFrameStacks.THAUMIC_DISTILLATE),
-                getAlloyPlate(SFrameStacks.AUROXIUM_ALLOY), XMaterial.CARTOGRAPHY_TABLE.parseItem(), getAlloyPlate(SFrameStacks.AUROXIUM_ALLOY),
+                getAlloyPlate(SFrameStacks.AUROXIUM_ALLOY), new ItemStack(Material.CARTOGRAPHY_TABLE), getAlloyPlate(SFrameStacks.AUROXIUM_ALLOY),
                 SFrameStacks.DILUTED_THERMIA, SFrameStacks.CONTROL_MODULE, SFrameStacks.DILUTED_THERMIA
         }).setEnergyPerTick(1024).register(plugin);
 
         new BasaltGenerator(Groups.MACHINES, SFrameStacks.BASALT_GENERATOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SlimefunItems.FREEZER_2, SlimefunItems.FREEZER_2, SlimefunItems.FREEZER_2,
-                SlimefunItems.ELECTRIFIED_CRUCIBLE_2, XMaterial.BASALT.parseItem(), SlimefunItems.ELECTRIFIED_CRUCIBLE_2,
+                SlimefunItems.ELECTRIFIED_CRUCIBLE_2, new ItemStack(Material.BASALT), SlimefunItems.ELECTRIFIED_CRUCIBLE_2,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BIG_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setProduction(1).setEnergyPerTick(128).register(plugin);
 
@@ -252,7 +251,7 @@ public final class SFrameItems {
 
         new ChunkEater(SFrameStacks.CHUNK_EATER, new ItemStack[]{
                 SFrameStacks.ARGON_CRYSTAL, SlimefunItems.ENERGIZED_CAPACITOR, SFrameStacks.ARGON_CRYSTAL,
-                SFrameStacks.PYROTIC_ALLOY, XMaterial.SCULK.parseItem(), SFrameStacks.PYROTIC_ALLOY,
+                SFrameStacks.PYROTIC_ALLOY, new ItemStack(Material.SCULK), SFrameStacks.PYROTIC_ALLOY,
                 SlimefunItems.HEATING_COIL, SFrameStacks.CONTROL_MODULE, SlimefunItems.HEATING_COIL
         }).setEnergyPerTick(1024).register(plugin);
 
@@ -270,7 +269,7 @@ public final class SFrameItems {
 
         new ConcreteGenerator(Groups.MACHINES, SFrameStacks.CONCRETE_GENERATOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SFrameStacks.FERSTEEL_ALLOY, SlimefunItems.RAINBOW_CONCRETE, SFrameStacks.FERSTEEL_ALLOY,
-                SlimefunItems.ELECTRIC_MOTOR, XMaterial.BRICKS.parseItem(), SlimefunItems.ELECTRIC_MOTOR,
+                SlimefunItems.ELECTRIC_MOTOR, new ItemStack(Material.BRICKS), SlimefunItems.ELECTRIC_MOTOR,
                 SFrameStacks.CUBIC_DIODES, SlimefunItems.BIG_CAPACITOR, SFrameStacks.CUBIC_DIODES
         }).setEnergyPerTick(128).register(plugin);
 
@@ -288,7 +287,7 @@ public final class SFrameItems {
 
         new CryoticExtractor(Groups.MACHINES, SFrameStacks.CRYOTIC_EXTRACTOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SFrameStacks.FERSTEEL_ALLOY, SFrameStacks.RUBEDO, SFrameStacks.FERSTEEL_ALLOY,
-                SFrameStacks.TRAVOCYTE_ALLOY, XMaterial.BEACON.parseItem(), SFrameStacks.TRAVOCYTE_ALLOY,
+                SFrameStacks.TRAVOCYTE_ALLOY, new ItemStack(Material.BEACON), SFrameStacks.TRAVOCYTE_ALLOY,
                 SlimefunItems.HEATING_COIL, SlimefunItems.BIG_CAPACITOR, SlimefunItems.HEATING_COIL
         }).setEnergyPerTick(512).register(plugin);
 
@@ -306,7 +305,7 @@ public final class SFrameItems {
 
         new DustGenerator(Groups.MACHINES, SFrameStacks.DUST_GENERATOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SlimefunItems.ELECTRIC_DUST_WASHER_3, SlimefunItems.ELECTRIC_GOLD_PAN_3, SlimefunItems.ELECTRIC_ORE_GRINDER_3,
-                SFrameStacks.BOOSTED_TELLURIUM, XMaterial.FURNACE.parseItem(), SFrameStacks.BOOSTED_TELLURIUM,
+                SFrameStacks.BOOSTED_TELLURIUM, new ItemStack(Material.FURNACE), SFrameStacks.BOOSTED_TELLURIUM,
                 SFrameStacks.CUBIC_DIODES, SFrameStacks.CONTROL_MODULE, SFrameStacks.CUBIC_DIODES
         }).setEnergyPerTick(256).register(plugin);
 
@@ -342,7 +341,7 @@ public final class SFrameItems {
 
         new GlassGenerator(Groups.MACHINES, SFrameStacks.GLASS_GENERATOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SFrameStacks.AUROXIUM_ALLOY, SlimefunItems.RAINBOW_GLASS, SFrameStacks.AUROXIUM_ALLOY,
-                SlimefunItems.GOLD_24K, XMaterial.GLASS.parseItem(), SlimefunItems.GOLD_24K,
+                SlimefunItems.GOLD_24K, new ItemStack(Material.GLASS), SlimefunItems.GOLD_24K,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BIG_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -360,7 +359,7 @@ public final class SFrameItems {
 
         new Putrifier(SFrameStacks.PUTRIFIER, new ItemStack[]{
                 SFrameStacks.PYROTIC_ALLOY, SFrameStacks.BOOSTED_TELLURIUM, SFrameStacks.PYROTIC_ALLOY,
-                XMaterial.SOUL_SOIL.parseItem(), XMaterial.SOUL_SAND.parseItem(), XMaterial.SOUL_SOIL.parseItem(),
+                new ItemStack(Material.SOUL_SOIL), new ItemStack(Material.SOUL_SAND), new ItemStack(Material.SOUL_SOIL),
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BIG_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -377,14 +376,14 @@ public final class SFrameItems {
         }).setProduction(15).setProcessingSpeed(30).setEnergyPerTick(512).register(plugin);
 
         new Recycler(Groups.MACHINES, SFrameStacks.RECYCLER, Foundry.RECIPE_TYPE, new ItemStack[]{
-                SlimefunItems.REINFORCED_ALLOY_INGOT, XMaterial.PISTON.parseItem(), SlimefunItems.REINFORCED_ALLOY_INGOT,
+                SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.PISTON), SlimefunItems.REINFORCED_ALLOY_INGOT,
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.ELECTRIC_FURNACE_3, SlimefunItems.REINFORCED_ALLOY_INGOT,
                 SlimefunItems.HEATING_COIL, SlimefunItems.CARBONADO_EDGED_CAPACITOR, SlimefunItems.HEATING_COIL
         }).setEnergyPerTick(512).register(plugin);
 
         new SulfateProducer(SFrameStacks.SULFATE_PRODUCER, new ItemStack[]{
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.BOOSTED_URANIUM, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                SlimefunItems.REINFORCED_ALLOY_INGOT, XMaterial.PISTON.parseItem(), SlimefunItems.REINFORCED_ALLOY_INGOT,
+                SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.PISTON), SlimefunItems.REINFORCED_ALLOY_INGOT,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.CARBONADO_EDGED_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -402,13 +401,13 @@ public final class SFrameItems {
 
         new TelluriumFragmentsSynthesizer(SFrameStacks.TELLURIUM_FRAGMENTS_SYNTHESIZER, new ItemStack[]{
                 SFrameStacks.HESPAZYM_ALLOY, SlimefunItems.ENERGIZED_CAPACITOR, SFrameStacks.HESPAZYM_ALLOY,
-                SFrameStacks.DILUTED_THERMIA, XMaterial.NETHER_WART_BLOCK.parseItem(), SFrameStacks.DILUTED_THERMIA,
+                SFrameStacks.DILUTED_THERMIA, new ItemStack(Material.NETHER_WART_BLOCK), SFrameStacks.DILUTED_THERMIA,
                 SFrameStacks.CUBIC_DIODES, SFrameStacks.CONTROL_MODULE, SFrameStacks.CUBIC_DIODES
         }).setEnergyPerTick(512).register(plugin);
 
         new TerracottaGenerator(SFrameStacks.TERRACOTTA_GENERATOR, new ItemStack[]{
                 SFrameStacks.ADRAMAL_ALLOY, SlimefunItems.RAINBOW_GLAZED_TERRACOTTA, SFrameStacks.ADRAMAL_ALLOY,
-                SlimefunItems.ELECTRIC_MOTOR, XMaterial.TERRACOTTA.parseItem(), SlimefunItems.ELECTRIC_MOTOR,
+                SlimefunItems.ELECTRIC_MOTOR, new ItemStack(Material.TERRACOTTA), SlimefunItems.ELECTRIC_MOTOR,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.MEDIUM_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -426,13 +425,13 @@ public final class SFrameItems {
 
         new ThermiaExtractor(Groups.MACHINES, SFrameStacks.THERMIA_EXTRACTOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.FLUID_PUMP, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                SFrameStacks.CRYOTIC, XMaterial.LODESTONE.parseItem(), SFrameStacks.CRYOTIC,
+                SFrameStacks.CRYOTIC, new ItemStack(Material.LODESTONE), SFrameStacks.CRYOTIC,
                 SlimefunItems.ELECTRIC_MOTOR, SFrameStacks.CONTROL_MODULE, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(512).register(plugin);
 
         new TreePeeler(Groups.MACHINES, SFrameStacks.TREE_PEELER, Foundry.RECIPE_TYPE, new ItemStack[]{
                 null, SlimefunItems.HEATING_COIL, null,
-                SlimefunItems.CARBONADO, XMaterial.STONECUTTER.parseItem(), SlimefunItems.CARBONADO,
+                SlimefunItems.CARBONADO, new ItemStack(Material.STONECUTTER), SlimefunItems.CARBONADO,
                 SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER, SlimefunItems.CARBONADO_EDGED_CAPACITOR, SlimefunItems.PROGRAMMABLE_ANDROID_WOODCUTTER
         }).setEnergyPerTick(128).register(plugin);
 
@@ -450,7 +449,7 @@ public final class SFrameItems {
 
         new WoolGenerator(Groups.MACHINES, SFrameStacks.WOOL_GENERATOR, Foundry.RECIPE_TYPE, new ItemStack[]{
                 SFrameStacks.FERSTEEL_ALLOY, SlimefunItems.RAINBOW_WOOL, SFrameStacks.FERSTEEL_ALLOY,
-                SFrameStacks.DEVOLVED_NAMALON, XMaterial.WHITE_WOOL.parseItem(), SFrameStacks.DEVOLVED_NAMALON,
+                SFrameStacks.DEVOLVED_NAMALON, new ItemStack(Material.WHITE_WOOL), SFrameStacks.DEVOLVED_NAMALON,
                 SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BIG_CAPACITOR, SlimefunItems.ELECTRIC_MOTOR
         }).setEnergyPerTick(128).register(plugin);
 
@@ -588,8 +587,8 @@ public final class SFrameItems {
 
         new OrokinWand(Groups.UTILS_AND_TOOLS, SFrameStacks.OROKIN_WAND, RecipeType.MAGIC_WORKBENCH, new ItemStack[]{
                 null, null, SFrameStacks.OROKIN_CELL,
-                null, XMaterial.STICK.parseItem(), null,
-                XMaterial.STICK.parseItem(), null, null
+                null, new ItemStack(Material.STICK), null,
+                new ItemStack(Material.STICK), null, null
         }).setMaxUseCount(64).register(plugin);
 
         new OrokinWand(Groups.UTILS_AND_TOOLS, SFrameStacks.PRIME_OROKIN_WAND, RecipeType.ANCIENT_ALTAR, new ItemStack[]{
@@ -600,13 +599,13 @@ public final class SFrameItems {
 
         new InputConfigurator(Groups.UTILS_AND_TOOLS, SFrameStacks.INPUT_CONFIGURATOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, SlimefunItems.CARGO_MANAGER,
-                null, XMaterial.BLAZE_ROD.parseItem(), null,
+                null, new ItemStack(Material.BLAZE_ROD), null,
                 SFrameStacks.OROKIN_WAND, null, null
         }).register(plugin);
 
         new SelectorConfigurator(Groups.UTILS_AND_TOOLS, SFrameStacks.SELECTOR_CONFIGURATOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 null, null, SFrameStacks.TELLURIUM,
-                null, XMaterial.BLAZE_ROD.parseItem(), null,
+                null, new ItemStack(Material.BLAZE_ROD), null,
                 SFrameStacks.INPUT_CONFIGURATOR, null, null
         }).register(plugin);
 
@@ -618,7 +617,7 @@ public final class SFrameItems {
 
         new EnergyCentral(Groups.UTILS_AND_TOOLS, SFrameStacks.ENERGY_CENTRAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
                 SlimefunItems.DAMASCUS_STEEL_INGOT, SlimefunItems.ENERGY_REGULATOR, SlimefunItems.DAMASCUS_STEEL_INGOT,
-                SlimefunItems.DAMASCUS_STEEL_INGOT, XMaterial.BEACON.parseItem(), SlimefunItems.DAMASCUS_STEEL_INGOT,
+                SlimefunItems.DAMASCUS_STEEL_INGOT, new ItemStack(Material.BEACON), SlimefunItems.DAMASCUS_STEEL_INGOT,
                 SlimefunItems.DAMASCUS_STEEL_INGOT, SFrameStacks.CONTROL_MODULE, SlimefunItems.DAMASCUS_STEEL_INGOT
         }).register(plugin);
 

@@ -1,10 +1,10 @@
 name: SlimeFrame
-author: Voper
+authors: [Voper, DrakesCraft-Labs]
 description: A Warframe based Slimefun addon
 main: me.voper.slimeframe.SlimeFrame
-website: https://github.com/VoperAD/SlimeFrame
+website: https://github.com/DrakesCraft-Labs/SlimeFrame-drake
 version: ${project.version}
-api-version: 1.19
+api-version: 1.21
 depend:
   - Slimefun
 softdepend:

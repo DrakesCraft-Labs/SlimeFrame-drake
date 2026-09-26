@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import com.cryptomorin.xseries.XMaterial;
 
 import org.bukkit.Color;
 import org.bukkit.Material;
@@ -63,7 +62,11 @@ public final class SFrameStacks {
         ItemStack potion = new ItemStack(recipient);
         PotionMeta meta = (PotionMeta) potion.getItemMeta();
         if (meta != null) {
-            meta.setBasePotionData(new PotionData(type));
+            try {
+                meta.setBasePotionType(type);
+            } catch (NoSuchMethodError ignored) {
+                meta.setBasePotionData(new PotionData(type));
+            }
             meta.addItemFlags(VersionedItemFlag.HIDE_ADDITIONAL_TOOLTIP);
             potion.setItemMeta(meta);
         }
@@ -332,7 +335,7 @@ public final class SFrameStacks {
 
     public static final SlimefunItemStack PLASTIDS = SFrameTheme.sfStackFromTheme(
             "WF_PLASTIDS",
-            XMaterial.PITCHER_POD.parseMaterial() == null ? Material.BROWN_DYE : XMaterial.PITCHER_POD.parseMaterial(),
+            Material.PITCHER_POD,
             RESOURCES_THEME,
             Colors.BROWN + "Plastids",
             "A disgusting nanite-infested tissue mass"
